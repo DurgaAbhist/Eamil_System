@@ -1,0 +1,46 @@
+<div class = "row">
+   <div style = "border-left: 1px solid black;">
+      <div class = "col-xs-10">
+         <h4 style = "font-family: Times New Roman;"><strong> {{ mail.name }} </strong>: {{ mail.descriptionHeader }} </h4>
+      </div>
+      <div class = "col-xs-2">
+         <span style = "padding-top: 10px; margin-right: 10px" class = "pull-left glyphicon glyphicon-star-empty"> </span>
+         <span style = "padding-top: 10px; color: gold;"  class = "glyphicon glyphicon-circle-arrow-right"> </span>
+      </div>
+   </div>
+   <div class = "col-xs-12">
+      <span class = "badge"> {{ mail.badge }} </span>
+   </div>
+   <br><br>
+   <br><br>
+   <hr>
+   <div class = "col-xs-12">
+      <div class = "col-xs-2">
+         <img
+            class = "img-responsive img-circle"
+            style = "max-height: 50px; border: 1px solid black"
+            src = "{{ mail.imagePath }}"
+            alt = "{{ mail.name }}">
+      </div>
+      <div class = "col-xs-4">
+         <h5 style = "font-weight: bold; margin-top: 15px;">
+            {{ mail.name }}
+            <span class = "help-block" style = "font-size: 10px; opacity: 0.5;">
+               to me
+            </span>
+         </h5>
+      </div>
+      <div class = "pull-right">
+         <div class="btn-group">
+            <button style = "background: white;" type = "button" class= "btn dropdown-toggle">
+               <span class = "glyphicon glyphicon-option-vertical"> </span>
+            </button>
+         </div>
+      </div>
+      <br><br>
+      <br><br>
+      <div class = "col-xs-12">
+         <strong> {{ mail.name }} </strong>: {{ mail.description }}
+      </div>
+   </div>
+</div>

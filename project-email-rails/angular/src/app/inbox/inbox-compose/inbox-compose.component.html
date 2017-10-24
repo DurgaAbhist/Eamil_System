@@ -1,0 +1,101 @@
+<div class = "row">
+   <div class = "col-xs-12">
+      <h3 style = "margin: 30px 0px 0px 50px;"> Compose Mail </h3>
+      <hr>
+      <form (ngSubmit) = "onSubmit(form)" #form = "ngForm">
+         <div class = "form-group">
+            <div class = "col-xs-8 col-xs-offset-1">
+               <label for="name"> Name of the Receiver: </label>
+               <input type = "text"
+                      class = "form-control"
+                      ngModel
+                      id = "name"
+                      name = "name"
+                      [(ngModel)] = "name"
+                      required
+                      placeholder="Eg: 'Max' or 'Paul'">
+            </div>
+         </div>
+         <br><br><br><br>
+         <div class = "form-group">
+            <div class = "col-xs-8 col-xs-offset-1">
+               <label for="imagePath"> URL of the Profile Pic </label>
+               <input type = "text"
+                      class = "form-control"
+                      ngModel
+                      id = "imagePath"
+                      name = "imagePath"
+                      required
+                      [(ngModel)] = "imagePath"
+                      placeholder="https://mashshare.net/wp-content/uploads/edd/2014/10/shorturls.png">
+               <button type = "button" style = "margin-top: 10px;" class = "btn btn-success" (click) = "suggestImagePath()">
+                   Suggest URL
+               </button>
+            </div>
+            <br><br><br><br>
+            <br><br>
+            <div class = "form-group">
+               <div class = "col-xs-8 col-xs-offset-1">
+                  <label for="descriptionHeader"> Enter the Subject </label>
+                  <input type = "text"
+                         class = "form-control"
+                         ngModel
+                         id = "descriptionHeader"
+                         name = "descriptionHeader"
+                         required
+                         [(ngModel)] = "descriptionHeader"
+                         placeholder="Eg: Regarding the Project Submission">
+               </div>
+            </div>
+            <br><br><br>
+            <div class = "form-group">
+               <div class = "col-xs-8 col-xs-offset-1">
+                  <label for="description"> Enter the Subject </label>
+                  <textarea type = "text"
+                         class = "form-control"
+                         ngModel
+                         id = "description"
+                         name = "description"
+                         required
+                         [(ngModel)] = "description"
+                         rows = "6"> </textarea>
+               </div>
+            </div>
+            <br><br><br><br>
+            <br><br><br><br>
+            <div class = "form-group">
+               <div class = "col-xs-8 col-xs-offset-1">
+                  <label for="description"> Enter Product name </label>
+                  <input type = "text"
+                         class = "form-control"
+                         ngModel
+                         placeholder = "Eg: 'paypal', 'amazon', 'paytm'"
+                         id = "badge"
+                         name = "badge"
+                         required
+                         [(ngModel)] = "badge">
+               </div>
+            </div>
+            <br><br><br>
+            <div class = "form-group">
+               <div class = "col-xs-8 col-xs-offset-1">
+                  <button
+                     class = "btn btn-success"
+                     type = "submit"
+                     style = "margin-right: 10px;"
+                     [title] = "!form.valid ? 'please fill all the credentials.' : ''"
+                     [disabled] = "!form.valid">
+                      Compose
+                  </button>
+                  <button class = "btn btn-danger" type = "button" (click) = "moveToDrafts()" style = "margin-right: 10px;">
+                     Cancel
+                  </button>
+                  <button class = "btn btn-primary" type = "button" (click) = "resetForm()">
+                     Reset
+                  </button>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>

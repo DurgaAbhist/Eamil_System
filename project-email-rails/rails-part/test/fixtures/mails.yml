@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  imagePath: MyString
+  descriptionHeader: MyString
+  description: MyText
+  badge: MyString
+  starred: false
+  important: false
+
+two:
+  name: MyString
+  imagePath: MyString
+  descriptionHeader: MyString
+  description: MyText
+  badge: MyString
+  starred: false
+  important: false

@@ -1,0 +1,105 @@
+<div class = "jumbotron">
+   <div style = "margin-bottom: 80px;">
+      <div class = "col-xs-12">
+         <div class = "col-xs-2">
+            <h2 style = "color: white; margin: -20px 0px 30px 0px;">
+               <span class = "glyphicon glyphicon-envelope" style = "margin-right: 10px; "> </span>
+               Mailbox
+            </h2>
+            <div class = "margin: 0px 0px 0px 0px;">
+               <p style = "font-size: 15px; color: white;"> Durga Abhist </p>
+               <p style = "font-size: 15px; margin-bottom: -30px; color: white;"> durgaabhist@pond.com <span class = "caret"> </span> </p>
+            </div>
+         </div>
+         <div class = "col-xs-9">
+            <form>
+               <div class = "form-group has-feedback">
+                  <span class="glyphicon glyphicon-search form-control-feedback pull-left" style = "left: 0px;"></span>
+                  <input
+                     class = "form-control"
+                     style = "padding-left: 30px; color: white; margin: -20px -30px 30px 0px;"
+                     placeholder = "Search for and e-mail or contact">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<div class = "">
+   <div class = "col-xs-2">
+      <div style="background: ghostwhite; margin: -30px -15px 0px 0px; padding: 20px 0px 100px 0px; opacity: 0.9">
+         <div id = "compose_button" style = "text-align: center;">
+            <a type = "button"
+               style = " color: white; background: #2b95e5; padding: 10px 20px 10px 20px"
+               routerLink = "/new">
+                Compose
+             </a>
+         </div>
+         <ul>
+            <h5 style = "margin: 20px 0px 15px 0px; margin-left: -5px; font-weight: bold"> Folders </h5>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/inbox"
+                  routerLinkActive = "active"
+                  [routerLinkActiveOptions] = "{exact: true}">
+                  <span class = "glyphicon glyphicon-inbox"> </span>
+                  Inbox
+               </a>
+            </li>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/sent"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-send"> </span>
+                  Sent
+               </a>
+            </li>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = "color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/drafts"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-envelope"> </span>
+                  Drafts
+               </a>
+            </li>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/spam"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-exclamation-sign"> </span>
+                  Spam
+               </a>
+            </li>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/trash"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-trash"> </span>
+                  Trash
+               </a>
+            </li>
+            <h5 style = "margin: 20px 0px 15px 0px; margin-left: -5px; font-weight: bold"> Filters </h5>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/starred"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-star"> </span>
+                  Starred
+               </a>
+            </li>
+            <li class = "" style="list-style: none; margin: 10px 20px 10px 20px;">
+               <a style = " color: black; padding: 10px 20px 10px 20px;"
+                  routerLink = "/important"
+                  routerLinkActive = "active">
+                  <span class = "glyphicon glyphicon-circle-arrow-right"> </span>
+                  Important
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+
+   <div class = "col-xs-9" style = "border: 1px solid white; margin: -70px -100px 0px 0px; background: white;">
+      <router-outlet> </router-outlet>
+   </div>
+</div>

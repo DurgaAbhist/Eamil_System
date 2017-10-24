@@ -1,0 +1,44 @@
+<a [routerLink] = "[inboxMessageId]"
+   routerLinkActive = "active"
+   style = " cursor: pointer;"
+   class="list-group-item clearfix">
+      <div class = "col-xs-1">
+         <form>
+            <div class = "form-group">
+               <input type = "checkbox" style = "width:15px; height:15px;" class = "pull-left">
+            </div>
+         </form>
+      </div>
+      <div class = "col-xs-11">
+         <div class = "col-xs-9">
+            <div class = "col-xs-3">
+               <img
+                  src = "{{ inboxMessage.imagePath }}"
+                  alt = "{{ inboxMessage.name }}"
+                  class = "img-responsive img-circle pull-left"
+                  style = "max-height: 40px; border-radius: 1px solid black;">
+            </div>
+            <div class = "col-xs-8">
+               <span class ="pull-left" style = "color: black; font-weight: bold;"> {{ inboxMessage.name }} </span>
+            </div>
+         </div>
+         <div class = "col-xs-3">
+            <p class ="pull-right"> 28 Jun </p>
+         </div>
+         <div  class = "col-xs-10">
+            <p class = "pull-left" style = " font-size: 11px; float: left; color: black">
+               {{ inboxMessage.descriptionHeader }}
+               <span class = "badge"> {{ inboxMessage.badge }} </span>
+            </p>
+         </div>
+         <div class = "col-xs-2">
+            <span
+               class = "glyphicon glyphicon-star-empty"
+               style = "margin-right: 0px;"
+               [ngStyle] = "{color: inboxMessage.starred == true ? 'gold' : ''}"> </span>
+            <span
+               class = "glyphicon glyphicon-circle-arrow-right"
+               [ngStyle] = "{color: inboxMessage.important == true ? 'gold' : ''}"> </span>
+         </div>
+      </div>
+</a>
